@@ -1,0 +1,257 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+ <div class="row">  
+  <div class="col-sm-6">
+
+      <h3><span class="badge badge-info">Predicci&oacute;n: {{mensaje}}</span><h3>
+
+      <div class="card" >
+          <img src="{{ url_for('static', filename='img/enfermedades/'+fotoEnfermedad) }}"  height="320" class="img-responsive" alt="...">
+          
+          
+          <div class="col-md-12 col-md-offset-2"> 
+             <div class="card-body d-flex justify-content-between align-items-center">
+                 
+                 <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#sintModalCenter" 
+                        data-title="{{ 'Síntomas de: ' ~ mensaje }}" data-body="{{ sintEnfermedad }}">
+                    S&iacute;ntomas</button>&nbsp;&nbsp;
+                 
+                 <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#prevModalCenter" 
+                        data-title="{{ 'Prevención de: ' ~ mensaje }}" data-body="{{ prevEnfermedad }}">
+                    Prevenci&oacute;n</button>&nbsp;&nbsp;
+                 
+                 <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#tratModalCenter" 
+                        data-title="{{ 'Tratamiento de: ' ~ mensaje }}" data-body="{{ tratEnfermedad }}">
+                    Tratamiento</button>
+                   
+             </div>
+          </div>
+          
+     </div>
+
+                                
+  </div> <!-- fin primera columna-->
+    
+  <div class="col-sm-6"> <!-- inicio segunda columna-->
+      
+    <h3><span>&nbsp;</span><h3>  
+      
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+            
+            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" 
+                   data-title="Foto subida"
+                   data-id="{{ url_for('static', filename='upload/'+ nombre_archivo) }}"
+                   data-target="#image-gallery">
+            
+              <img src="{{ url_for('static', filename='upload/'+ nombre_archivo) }}" width="470" height="320" class="img-responsive" alt="...">
+                
+          </a>
+                
+          <div class="carousel-caption d-none d-md-block">
+            <p>Foto subida</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" 
+                   data-title="Detecci&oacute;n de la hoja"
+                   data-id="{{ url_for('static', filename='output/static/upload/'+ nombre_archivo) }}"
+                   data-target="#image-gallery">
+            
+              <img src="{{ url_for('static', filename='output/static/upload/'+ nombre_archivo) }}" width="470" height="320" class="img-responsive" alt="...">
+          </a>
+            
+          <div class="carousel-caption d-none d-md-block">
+            <p>Detecci&oacute;n de la hoja</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+            
+          <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" 
+               data-title="&Aacute;rea hoja detectada"
+               data-id="{{ url_for('static', filename='output/static/upload/'+'Area'+ nombre_archivo) }}"
+               data-target="#image-gallery">
+              <img src="{{ url_for('static', filename='output/static/upload/'+'Area'+ nombre_archivo) }}"  height="320" class="img-responsive" alt="...">
+          </a>
+            
+          <div class="carousel-caption d-none d-md-block">
+            <p>&Aacute;rea hoja detectada</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div> 
+      
+    <div class="col-md-12 col-md-offset-2"> 
+     <div class="card-body d-flex justify-content-between align-items-center">
+         &nbsp;&nbsp;
+         <a class="btn btn-primary btn-md" href="/" role="button">Salir</a>
+     </div>
+    </div>  
+    
+  </div>   
+    
+ </div>   <!--fin ROW --> 
+      
+    <!-- Modal -->
+    <div class="modal fade bd-example-modal-lg" id="sintModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Chao</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <embed id="myPdf" src=""  width="100%" height="400px" />      
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>      
+      
+
+      
+    <!-- Modal -->
+    <div class="modal fade bd-example-modal-lg" id="prevModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Chao</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <embed id="myPdf" src=""  width="100%" height="400px" />      
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>      
+       
+      
+      
+    <!-- Modal -->
+    <div class="modal fade bd-example-modal-lg" id="tratModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Chao</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <embed id="myPdf" src=""  width="100%" height="400px" />      
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>       
+      
+      
+      
+      
+      
+        <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="image-gallery-title">Hola</h4>
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <img id="myImage" class="img-responsive col-md-12" src="" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      
+      <script>
+       $(document).ready(function() {
+        $('#image-gallery').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget) // Button that triggered the modal
+            var recipient = button.data('title') // Extract info from data-* attributes
+            var myImageId = button.data('id');
+            // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+            // Update the modal's content. We'll use jQuery here, but you could use a data binding library or othermethods instead.
+            var modal = $(this)
+            modal.find('.modal-title').text(recipient)
+            modal.find('.modal-body #myImage').attr("src", myImageId)
+            }); 
+           
+         $('#sintModalCenter').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget) // Button that triggered the modal
+            var recipient = button.data('title') // Extract info from data-* attributes
+            var cuerpomodal = button.data('body') // Extract info from data-* attributes
+            // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+            // Update the modal's content. We'll use jQuery here, but you could use a data binding library or othermethods instead.
+            var modal = $(this)
+            modal.find('.modal-title').text(recipient)
+            //modal.find('.modal-body').text(cuerpomodal)
+            modal.find('.modal-body #myPdf').attr("src", cuerpomodal)
+         }); 
+           
+           
+         $('#prevModalCenter').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget) // Button that triggered the modal
+            var recipient = button.data('title') // Extract info from data-* attributes
+            var cuerpomodal = button.data('body') // Extract info from data-* attributes
+            // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+            // Update the modal's content. We'll use jQuery here, but you could use a data binding library or othermethods instead.
+            var modal = $(this)
+            modal.find('.modal-title').text(recipient)
+            //modal.find('.modal-body').text(cuerpomodal)
+            modal.find('.modal-body #myPdf').attr("src", cuerpomodal)
+         });            
+           
+
+         $('#tratModalCenter').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget) // Button that triggered the modal
+            var recipient = button.data('title') // Extract info from data-* attributes
+            var cuerpomodal = button.data('body') // Extract info from data-* attributes
+            // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+            // Update the modal's content. We'll use jQuery here, but you could use a data binding library or othermethods instead.
+            var modal = $(this)
+            modal.find('.modal-title').text(recipient)
+            //modal.find('.modal-body').text(cuerpomodal)
+            modal.find('.modal-body #myPdf').attr("src", cuerpomodal)
+          });                    
+           
+           
+           
+         });  
+           
+       </script>   
+      
+      
+</div> <!--fin jumbotron -->
+
+{% endblock%}

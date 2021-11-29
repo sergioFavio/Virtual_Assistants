@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "camilapythonasistente",
+  "private_key_id": "7723e4c012ddc6ae457417495aa8d0c5dc97fc2c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCk6YIlGGMgskxN\nMGs66v9HEyJD87xCKKUvRGuZWZaPpFbyxxJIlffeGKxQepTzk2vVdG20GLbN9Jjd\nQmqVNGRmQHTl5GguMpr8l1OEVHHHjwFFahEEMUPHfo1oehsBYnAP+kbr+WiPsUWS\n+m/ARMpuKcL/+K2ODiaprd+vpwTOilbWdAzQDDQ5cSXybdZamxS/OspAYRhdo7KH\nmYTlYyP0wzlcFKuNZbx5/rUVMEGsat+bemq43KnnjksUR3vIVeSFKtN+OO/VPl7R\nW2AUJkRUU2ZlBfEZLf8Jyuu1MKKmxq6jd/6D25hNDOsuLWO80hRqOhMfe/BlI990\nVEfA3W2XAgMBAAECggEACJkcaXttPM+stuSzcWW+MtRkMy01+ucQ5ABcTTuW5BPs\nfy4XL+ASYPP0ObSHAyfNB/9jO3AVkrvSEV+8nCZzynlJtdnj/zd6YDANnuSQgTyU\nSlDaCUW1I+WDvumtKTQawOumHx0WVb8C3fpoQ5rN//djlf2s2a9JVlUBpB3t7nFU\nKj6+QC10MhVg5N0MTw9Gs6ELzVEI3gcJlcywB41ENtmEkuTd7udO+HSvQPdZcnAW\nblYJT8hQKr8DRq3PTNCzJj0JrAYdpuUoIGMWW8E+X+ksPqjqqap/UOX7nd6oZFPW\n/WeQIpuMNLVY0KSjCMPAD9Pvd/31oAEi2iI53bz2eQKBgQDRXIvF26avlVwb+OO+\nEwHjBLZbT+O+XLOgY7ISun1sAFm8zCsU9u0wpAw25cf+E8ScshsM9VlyMqQyNY/H\n0MeysJA54f4TfF6p95u14fcio34Dq2kTc9/jQHwkr1VKbcAp7f94s6Asey/+jR2U\nKKVHIXYw/YcBU86KpBXZMOhBWQKBgQDJphthBx3p7RT12zubgbAglYfSF3oW5X89\n8Z9PTPV68FlTTaTS2Mz94h75mH4P131WaFLKNEPKPLjiDmNB/1CtJ7x597E+iSil\nVrC599F7Mv1DnPx0/abetkr3TfQBk98PMsA9mR0sIN0CGaKCVPPQ5WCQXJk+Otom\nf1LAZnbYbwKBgQDAlJyNt+qwAHfl0x/Kq7lElgUYIXiglq00kAAxchIE0p25KSVH\n94te/seth9hbQtvMN5jiZp2MikC3XsWPS+El4XwJgnQwgGqjdfxpZh3qYvF7dqUF\nG8WKSLrpE88k06e76gzhfnmL8RTI1g2rR2gg8grCLbON6QVISn8+ddpuoQKBgDH+\n/kDTW+ZZAt5mSeQnhny9tlwvt/SfWCoKk149DYw6tVsDID+qw0CbZOSrm23gFtJq\nsUQzKy+kWI6r1I5TeDRGauOutwJzTWGZGd4yBH1QSh0OekWjclE7z2B7smkFucNx\n6Noc8W+0gjd4FaPM3lrH1GZWnyQfwWDUJrdPcF3/AoGACg3xI92Y8KRLpRICtYzn\nZ9miQNMISxTKSozbXIHVZWj218UT+jFm1hcfb5xsvP64ALL4Gw3gDFcmjLLBB31u\nvl0Vy/oIBI2xqsEUAEfMktW07xLqXQdwiOa2U3FPWs31PZZixHKLFs5iAC9Dko0N\nX6ZxE+LDRkZWKAzwAMG8FAk=\n-----END PRIVATE KEY-----\n",
+  "client_email": "camila@camilapythonasistente.iam.gserviceaccount.com",
+  "client_id": "100385712121640345199",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/camila%40camilapythonasistente.iam.gserviceaccount.com"
+}

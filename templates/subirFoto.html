@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">  
+  <div class="container">
+      <h2>Subir foto de hojas de planta de tomate para detectar y clasificar enfermedad.</h2>
+      <form action="/fotosSubidas" method="POST" enctype="multipart/form-data">
+        <div class="row">
+            <figure class="thumb col-md-6">
+              <img class="img-responsive" src="{{ url_for('static', filename='img/incognita.jpg') }}"  width="40%" height="80%">
+              <figcaption>
+                <label>
+                    <div class="form-group">
+                      <input type="file" class="form-control-file" id="exampleFormControlFile1"  name="archivo" accept=".jpg">
+                    </div>           
+                </label>    
+              </figcaption>  
+            </figure>
+          
+            <picture class="thumb col-md-6">
+              <p id="textoDetecta"></p>
+              <img id="detecta" src=""> 
+            </picture>          
+          
+        </div>  <!-- fin row -->
+          
+        <button type="submit" id="btnSubirFoto" class="btn btn-primary btn-md">Subir Foto</button>
+      </form> 
+      
+  </div>  
+</div>
+
+{% endblock%}

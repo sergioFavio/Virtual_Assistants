@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+      <h3 class="display-4">Objetivo</h3>
+      <p class="lead">Realizar investigación que se constituya en un aporte creativo a nivel nacional al aplicar el aprendizaje profundo a problemas de visión de computadora tales como detección y clasificación específicamente en las enfermedades del tomate mediante el procesamiento de imágenes digitales.</p>
+      <hr class="my-4">
+           
+      <p class="lead"><img class="img-responsive" src="{{ url_for('static', filename='img/DrTomatto.png') }}" width="50" height="50"><font color="red"><strong>&nbsp;&nbsp; Doctor Tomatto &nbsp;</strong></font>es un prototipo que detecta y clasifica enfermedades que se dan en la hoja, recibe fotos de las HOJAS DE LA PLANTA del tomate en formato JPG . Las enfermedades que detecta y clasifica son:
+<br>
+1).- Mancha bacteriana
+&nbsp;&nbsp;&nbsp;
+2).-Tizón temprano
+&nbsp;&nbsp;&nbsp;
+3).- Hoja sana
+<br>
+Se accede mediante la siguiente url http://200.58.74.187:5000 , que está habilitada por algunas horas.
+Agradecemos sus comentarios vía mail: serginho61@gmail.com  &oacute; whatsapp: +56 9 87 63 70 39. 
+<br>          
+NOTA.- solo subir fotos de hojas de tomate, gracias.
+     </p>
+        
+   <div class="col-md-12 col-md-offset-2"> 
+     <div class="card-body d-flex justify-content-between align-items-center">
+     &nbsp;&nbsp;
+     <a class="btn btn-primary btn-md" href="/" role="button">Cerrar</a>
+     </div>
+    </div>
+     
+    
+        
+</div>
+
+{% endblock%}
+
+

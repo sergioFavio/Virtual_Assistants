@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+  <center>
+  <!--img class="img-responsive" src="{{ url_for('static', filename='img/AteneaByte.png') }}" width="300" height="300"-->
+  <video width="300" height="300" controls>
+    <source src="{{ url_for('static', filename='img/atenea_video.mp4') }}" type="video/mp4">
+    Tu navegador no soporta los vídeos de HTML5
+  </video>
+
+  <img class="img-responsive" src="{{ url_for('static', filename='img/tipografiatomatto-04-04.png') }}" width="400" height="250">
+  </center>
+  <h1 class="display-4">Atenea Byte, periodista virtual. IA app.</h1>
+ 
+  <!--hr class="my-4"-->
+ 
+</div>
+
+{% endblock%}
+
+    
+    
+  
